@@ -104,41 +104,37 @@
                                                     <constraint firstAttribute="height" constant="250" id="t4C-Tz-MQc"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C8-LI-V39">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C8-LI-V39">
                                                 <rect key="frame" x="20" y="280" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjh-k8-H3x">
-                                                <rect key="frame" x="107" y="290" width="200" height="34"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfi-e9-LJr">
+                                                <rect key="frame" x="350" y="216" width="44" height="44"/>
                                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="a4q-MN-pwG"/>
+                                                    <constraint firstAttribute="width" constant="44" id="1XW-lr-tL8"/>
+                                                    <constraint firstAttribute="height" constant="44" id="lb5-db-Wu2"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                                <state key="normal" title="Share">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="square.and.arrow.up" catalog="system">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="shareButtonTapped" destination="5Rs-l2-0fk" eventType="touchUpInside" id="Eok-MM-UZT"/>
+                                                    <action selector="shareButtonTapped" destination="5Rs-l2-0fk" eventType="touchUpInside" id="vJA-hb-zod"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="6C8-LI-V39" firstAttribute="top" secondItem="Oo6-Ug-dxA" secondAttribute="bottom" constant="10" id="3jZ-FV-Uxp"/>
-                                            <constraint firstItem="Qjh-k8-H3x" firstAttribute="top" secondItem="6C8-LI-V39" secondAttribute="bottom" constant="10" id="AxM-8V-xrl"/>
+                                            <constraint firstItem="Cfi-e9-LJr" firstAttribute="bottom" secondItem="Oo6-Ug-dxA" secondAttribute="bottom" constant="-10" id="Dkr-vi-Tt3"/>
                                             <constraint firstItem="Oo6-Ug-dxA" firstAttribute="top" secondItem="7JB-Vs-zsR" secondAttribute="top" constant="20" id="LPb-D8-jzx"/>
                                             <constraint firstItem="Oo6-Ug-dxA" firstAttribute="leading" secondItem="7JB-Vs-zsR" secondAttribute="leading" constant="20" id="LSA-Q1-D1v"/>
                                             <constraint firstItem="6C8-LI-V39" firstAttribute="trailing" secondItem="Oo6-Ug-dxA" secondAttribute="trailing" id="SfC-8F-ckG"/>
-                                            <constraint firstItem="Qjh-k8-H3x" firstAttribute="centerX" secondItem="6C8-LI-V39" secondAttribute="centerX" id="gwo-LN-hII"/>
-                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Qjh-k8-H3x" secondAttribute="bottom" constant="484" id="jUp-nC-M2s"/>
+                                            <constraint firstItem="Cfi-e9-LJr" firstAttribute="trailing" secondItem="Oo6-Ug-dxA" secondAttribute="trailing" id="WQQ-7N-6NB"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6C8-LI-V39" secondAttribute="bottom" constant="10" id="h3A-oU-keo"/>
                                             <constraint firstItem="6C8-LI-V39" firstAttribute="leading" secondItem="Oo6-Ug-dxA" secondAttribute="leading" id="wJc-kU-CpO"/>
                                             <constraint firstAttribute="trailing" secondItem="Oo6-Ug-dxA" secondAttribute="trailing" constant="20" id="yDH-iT-pxh"/>
                                         </constraints>
@@ -192,4 +188,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
 </document>
