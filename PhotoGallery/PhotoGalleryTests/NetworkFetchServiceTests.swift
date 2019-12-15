@@ -24,7 +24,7 @@ class NetworkFetchServiceTests: XCTestCase {
             switch result {
             case .success(let images):
                 XCTAssertNotNil(images, "There should be some images.")
-            case .failure(let error):
+            case .failure(let _):
                 XCTFail("There should be some images.")
             }
         }
