@@ -22,10 +22,15 @@ final class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViewModel()
+        setup()
     }
     
     // MARK: - Private API
+    private func setup() {
+        setupForTests()
+        setupViewModel()
+    }
+    
     private func showImage(_ image: Image) {
         let storyboard = UIStoryboard(name: Storyboards.main.rawValue, bundle: Bundle.main)
         if let imageViewController = storyboard.instantiateViewController(identifier: ImageViewController.identifier) as? ImageViewController {
@@ -72,6 +77,16 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: Constants.cellSize.rawValue, height: Constants.cellSize.rawValue)
+    }
+    
+}
+
+extension GalleryViewController: Testable {
+    
+    func setupForTests() {
+        guard Tests.isTesting else { return }
+        
+        collectionView.accessibilityIdentifier = Tests.galleryCollectionViewIdentifier.rawValue
     }
     
 }
