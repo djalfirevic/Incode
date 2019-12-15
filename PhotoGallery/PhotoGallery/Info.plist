@@ -20,6 +20,17 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Photo Gallery needs access to your Camera so you can add photos. </string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Photo Gallery needs access to your Photo Library so you can save photos. </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Gallery needs access to your Photo Library so you can add photos. </string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

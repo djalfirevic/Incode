@@ -8,7 +8,11 @@
 
 import UIKit
 
-class GalleryViewController: UIViewController {
+internal enum Constants: CGFloat {
+    case cellSize = 80.0
+}
+
+final class GalleryViewController: UIViewController {
     
     // MARK: - Properties
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -18,7 +22,7 @@ class GalleryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // FETCH podataka...
+        setupViewModel()
     }
     
     // MARK: - Private API
@@ -28,6 +32,15 @@ class GalleryViewController: UIViewController {
             imageViewController.image = image
             navigationController?.pushViewController(imageViewController, animated: true)
         }
+    }
+    
+    private func setupViewModel() {
+        viewModel.fetchCompleted = { [weak self] in
+            guard let self = self else { return }
+            
+            self.collectionView.reloadData()
+        }
+        viewModel.fetchImages()
     }
     
 }
@@ -51,12 +64,14 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     
     // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if let image = viewModel.imageAt(indexPath) {
+            showImage(image)
+        }
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.height)
+        return CGSize(width: Constants.cellSize.rawValue, height: Constants.cellSize.rawValue)
     }
     
 }

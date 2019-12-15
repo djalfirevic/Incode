@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageCollectionViewCell: UICollectionViewCell {
+final class ImageCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     @IBOutlet private weak var imageView: UIImageView!
@@ -21,6 +21,8 @@ class ImageCollectionViewCell: UICollectionViewCell {
     // MARK: - Private API
     private func setup() {
         guard let image = image else { return }
+        
+        imageView.loadImage(from: image.picture, forID: image.id)
     }
     
 }

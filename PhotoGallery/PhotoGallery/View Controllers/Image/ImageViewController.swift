@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController {
+final class ImageViewController: UIViewController {
     
     // MARK: - Properties
     @IBOutlet private weak var imageView: UIImageView!
@@ -24,7 +24,12 @@ class ImageViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction private func shareButtonTapped() {
+        guard let image = image else { return }
         
+        if let image = cache.object(forKey: image.id as AnyObject) as? UIImage {
+            let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            present(activityViewController, animated: true)
+        }
     }
     
     // MARK: - Private API
@@ -32,6 +37,7 @@ class ImageViewController: UIViewController {
         guard let image = image else { return }
         
         textLabel.text = image.comment
+        imageView.loadImage(from: image.picture, forID: image.id)
     }
     
 }
