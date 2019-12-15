@@ -24,7 +24,7 @@ final class GalleryViewController: UIViewController {
         
         setup()
     }
-    
+
     // MARK: - Actions
     @IBAction private func uploadPhotoButtonTapped() {
         let alertController = UIAlertController(title: "Choose source", message: nil, preferredStyle: .actionSheet)
