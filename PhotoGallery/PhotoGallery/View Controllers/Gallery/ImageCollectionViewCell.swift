@@ -18,6 +18,13 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - Cell Lifecycle
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        imageView.image = nil
+    }
+    
     // MARK: - Private API
     private func setup() {
         guard let image = image else { return }
