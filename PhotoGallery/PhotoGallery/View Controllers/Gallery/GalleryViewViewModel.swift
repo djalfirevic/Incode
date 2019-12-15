@@ -37,4 +37,8 @@ final class GalleryViewViewModel {
         }
     }
     
+    func insertImage(_ image: Image) {
+        images.append(image)
+    }
+    
 }

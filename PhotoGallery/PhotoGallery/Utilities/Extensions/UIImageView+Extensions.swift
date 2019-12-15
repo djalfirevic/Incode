@@ -18,7 +18,7 @@ extension UIImageView {
             return
         }
 		
-		let activityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+		let activityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
 		activityIndicatorView.hidesWhenStopped = true
 		activityIndicatorView.startAnimating()
 		activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false

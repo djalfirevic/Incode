@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O8q-LI-KZ6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -65,7 +66,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Gallery" id="RHv-z1-nKz"/>
+                    <navigationItem key="navigationItem" title="Gallery" id="RHv-z1-nKz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wFP-cD-FBZ">
+                            <connections>
+                                <action selector="uploadPhotoButtonTapped" destination="BYZ-38-t0r" id="Wkc-zb-01Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="cxN-p9-IDR" id="HgZ-8g-cqr"/>
                     </connections>
