@@ -11,6 +11,27 @@ import UIKit
 class ImageViewController: UIViewController {
     
     // MARK: - Properties
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var textLabel: UILabel!
     var image: Image?
+    
+    // MARK: - View Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setup()
+    }
+    
+    // MARK: - Actions
+    @IBAction private func shareButtonTapped() {
+        
+    }
+    
+    // MARK: - Private API
+    private func setup() {
+        guard let image = image else { return }
+        
+        textLabel.text = image.comment
+    }
     
 }

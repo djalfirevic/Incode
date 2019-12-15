@@ -1,5 +1,5 @@
 //
-//  UIViewController+Helpers.swift
+//  UICollectionViewCell+Helpers.swift
 //  PhotoGallery
 //
 //  Created by Djuro Alfirevic on 12/15/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+extension UICollectionViewCell {
     
     static var identifier: String {
         return String(describing: self)
