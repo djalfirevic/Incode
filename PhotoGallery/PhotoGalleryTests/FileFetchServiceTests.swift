@@ -20,7 +20,7 @@ class FileFetchServiceTests: XCTestCase {
             switch result {
             case .success(let images):
                 XCTAssertNotNil(images, "There should be at least 2 images.")
-            case .failure(let _):
+            case .failure(_):
                 XCTFail("There should be at least 2 images.")
             }
 		}

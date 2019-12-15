@@ -118,7 +118,7 @@
                                                     <constraint firstAttribute="height" constant="44" id="lb5-db-Wu2"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                                <state key="normal" image="icon_share">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -189,6 +189,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="icon_share" width="13" height="16"/>
     </resources>
 </document>
