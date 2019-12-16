@@ -20,6 +20,14 @@ final class GalleryViewController: UIViewController {
         
         setup()
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+     
+        DispatchQueue.main.async {
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }
+    }
 
     // MARK: - Actions
     @IBAction private func uploadPhotoButtonTapped() {
