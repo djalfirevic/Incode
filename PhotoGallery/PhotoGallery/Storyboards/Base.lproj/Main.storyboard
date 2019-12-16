@@ -88,10 +88,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do1-5g-kOA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Do1-5g-kOA">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-Vs-zsR">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-Vs-zsR">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oo6-Ug-dxA">
@@ -138,7 +138,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="7JB-Vs-zsR" secondAttribute="trailing" id="J7d-4d-iMh"/>
-                                    <constraint firstItem="7JB-Vs-zsR" firstAttribute="centerY" secondItem="Do1-5g-kOA" secondAttribute="centerY" id="KfD-0b-KU6"/>
                                     <constraint firstItem="7JB-Vs-zsR" firstAttribute="width" secondItem="Do1-5g-kOA" secondAttribute="width" id="MhV-2U-klG"/>
                                     <constraint firstAttribute="bottom" secondItem="7JB-Vs-zsR" secondAttribute="bottom" id="TfJ-iU-iqQ"/>
                                     <constraint firstItem="7JB-Vs-zsR" firstAttribute="top" secondItem="Do1-5g-kOA" secondAttribute="top" id="VmV-SW-EWO"/>
@@ -149,7 +148,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Do1-5g-kOA" firstAttribute="leading" secondItem="nQT-Dr-uiX" secondAttribute="leading" id="Kl1-7E-aol"/>
-                            <constraint firstAttribute="bottom" secondItem="Do1-5g-kOA" secondAttribute="bottom" id="LqJ-wF-sEX"/>
+                            <constraint firstItem="nQT-Dr-uiX" firstAttribute="bottom" secondItem="Do1-5g-kOA" secondAttribute="bottom" id="LqJ-wF-sEX"/>
                             <constraint firstItem="nQT-Dr-uiX" firstAttribute="trailing" secondItem="Do1-5g-kOA" secondAttribute="trailing" id="OEg-t1-5fy"/>
                             <constraint firstItem="Do1-5g-kOA" firstAttribute="top" secondItem="nQT-Dr-uiX" secondAttribute="top" id="gnc-6F-AoF"/>
                         </constraints>
