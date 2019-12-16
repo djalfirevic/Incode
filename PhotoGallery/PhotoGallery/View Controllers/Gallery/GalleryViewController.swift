@@ -8,6 +8,10 @@
 
 import UIKit
 
+internal enum Constants: CGFloat {
+    case cellSize = 80.0
+}
+
 final class GalleryViewController: UIViewController {
     
     // MARK: - Properties
@@ -21,14 +25,6 @@ final class GalleryViewController: UIViewController {
         setup()
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-     
-        DispatchQueue.main.async {
-            self.collectionView.collectionViewLayout.invalidateLayout()
-        }
-    }
-
     // MARK: - Actions
     @IBAction private func uploadPhotoButtonTapped() {
         let alertController = UIAlertController(title: "Choose source", message: nil, preferredStyle: .actionSheet)
@@ -121,7 +117,7 @@ final class GalleryViewController: UIViewController {
     
 }
 
-extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -143,6 +139,11 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
         if let image = viewModel.imageAt(indexPath) {
             showImage(image)
         }
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Constants.cellSize.rawValue, height: Constants.cellSize.rawValue)
     }
     
 }
