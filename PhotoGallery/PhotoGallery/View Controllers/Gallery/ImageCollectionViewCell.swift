@@ -11,7 +11,7 @@ import UIKit
 final class ImageCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
-    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var imageView: AsyncImageView!
     var image: Image? {
         didSet {
             setup()
